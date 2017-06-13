@@ -1,0 +1,343 @@
+<!--只有eui.css需要引入在线样式，其余都是本地文件。-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>弹窗</title>
+		<link rel="stylesheet" href="css/fontawesome.css" />
+		<!--<link rel="stylesheet" href="http://file.40017.cn/quyu/Public/eui/eui.css" />-->
+		<!--<link rel="stylesheet" href="css/cpm.css" />-->
+		<link rel="stylesheet" href="css/eui.css" />
+		<link rel="stylesheet" href="css/addresschoose.css" />
+		<link rel="stylesheet" href="css/trimming.css" />
+		<!--<link href='/sell/customerservice/Content/selectAddress/selectAddress.css?_t=20170314184551726' rel='stylesheet' type='text/css' />-->
+	</head>
+	<body>
+		<div class="eui-dialog" id="eDialog-1">
+			<div class="eui-dialog-mask"></div>
+			<div class="eui-dialog-cont">
+				<div class="eui-dialog-hd">
+					<h3 id="reminder">高级筛选</h3>
+					<button class="eui-dialog-btn-close"></button>
+				</div>
+				<div class="eui-dialog-bd">
+					<div class="eui-form-item-control">
+          				<input type="radio" id="radio-1" name="radio" class="eui-radio-variant">
+          				<label for="radio-1">今日新增</label>
+          				<input type="radio" id="radio-2" name="radio" class="eui-radio-variant">
+          				<label for="radio-2">今日待跟进</label>
+          				<input type="radio" id="radio-3" name="radio" class="eui-radio-variant">
+          				<label for="radio-3">过期未联系</label>
+          				<input type="radio" id="radio-4" name="radio" class="eui-radio-variant">
+          				<label for="radio-4">未来一周生日</label>
+          				<input type="radio" id="radio-5" name="radio" class="eui-radio-variant">
+          				<label for="radio-5">订单未激活</label>
+          				<input type="radio" id="radio-6" name="radio" class="eui-radio-variant">
+          				<label for="radio-6">信息待完善</label>
+          				<input type="radio" id="radio-7" name="radio" class="eui-radio-variant">
+          				<label for="radio-7">无微信</label>
+          				<input type="radio" id="radio-8" name="radio" class="eui-radio-variant">
+          				<label for="radio-8">不愿进群</label>
+          				<input type="radio" id="radio-9" name="radio" class="eui-radio-variant">
+          				<label for="radio-9">小群运营15天</label>
+          				<input type="radio" id="radio-10" name="radio" class="eui-radio-variant">
+          				<label for="radio-10">今日转交进来</label>
+          				<input type="radio" id="radio-11" name="radio" class="eui-radio-variant">
+          				<label for="radio-11">退会退群</label>        				
+     				</div>
+     				<ul class="eui-item-chooselist">
+     					<li>
+     						<div class="filter-item">
+      							<div class="filter-item-caption">会员类型</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">购买人</option>
+				             			<option value="2">受益人</option>
+				             			<option value="3">购买人、受益人</option>				              	
+          							</select>	
+      							</div>
+  							</div>
+  							<div class="filter-item">
+      							<div class="filter-item-caption">产品类型</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">黄金关爱版</option>
+				             			<option value="2">白金浪漫版</option>
+				             			<option value="3">铂金浪漫版</option>
+				             			<option value="4">要客版</option>
+				             			<option value="5">企业版</option>
+          							</select>	
+      							</div>
+  							</div>
+  							<div class="filter-item">
+      							<div class="filter-item-caption">待完善信息</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">姓名</option>
+				             			<option value="2">性别</option>
+				             			<option value="3">常住地</option>	
+				             			<option value="4">证件号</option>	
+				             			<option value="5">出生日期</option>	
+          							</select>	
+      							</div>
+  							</div>
+     					</li>
+     					<li>
+     						<div class="filter-item">
+      							<div class="filter-item-caption">投保状态</div>
+      							<div class="filter-item-control">
+          							<select id="insureStatus" data-param="InsureStatus" class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">已投保</option>
+				             			<option value="2">未投保</option>
+          							</select>	
+      							</div>
+  							</div>
+  							<div class="filter-item">
+      							<div class="filter-item-caption">拉群状态</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">待拉小群</option>
+				             			<option value="2">待拉大群（已拉小群）</option>
+				             			<option value="3">已拉大群</option>
+				             			<option value="4">无法入群</option>
+				             			<option value="5">无法入群（无微信）</option>
+          								<option value="6">无法入群（不愿进群）</option>
+          							</select>	
+      							</div>
+  							</div>
+  							<div class="filter-item">
+      							<div class="filter-item-caption">性别</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">男</option>
+				             			<option value="2">女</option>	
+          							</select>	
+      							</div>
+  							</div>
+     					</li>    				
+     					<li>
+     						<div class="filter-item" data-type="area">
+      							<div class="filter-item-caption">常住地</div>
+      							<div class="filter-item-control">
+          							<div id="usualAddress" class="select-address"></div>	
+      							</div>
+  							</div>
+  							<div class="filter-item">
+      							<div class="list-age filter-item-caption">年龄</div>
+      							<div class="eui-form-item-control" id="ageRange">
+            						<input type="text" placeholder="最小" id="minAge" class="age eui-input" maxlength="3" onkeyup="this.value=this.value.replace(/[^\d]/ig,'')"/>
+            						<input type="text" placeholder="最大" id="maxAge" class="age eui-input" maxlength="3" onkeyup="this.value=this.value.replace(/[^\d]/ig,'')"/>
+        						</div>
+  							</div>
+  							<div class="birthday filter-item">
+      							<div class="filter-item-caption">生日</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select" id="birthday">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">未来七天</option>
+				             			<option value="2">未来三十天</option>
+				             			<option value="3">自定义</option>	
+          							</select>	
+          							<div class="memberBirthVal">--请选择--</div>
+      							</div>
+  							</div>
+     					</li>
+     					<li>
+     						<div class="filter-item">
+      							<div class="filter-item-caption">客户满意度</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">A（满意）</option>
+				             			<option value="2">B（不满意）</option>
+				             			<option value="3">C（非常不满意）</option>	
+          							</select>	
+      							</div>
+  							</div>
+  							<div class="filter-item">
+      							<div class="filter-item-caption">活跃度</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">积极</option>
+				             			<option value="2">活跃</option>
+				             			<option value="3">冒泡</option>	
+				             			<option value="4">潜水</option>
+          							</select>	
+      							</div>
+  							</div>
+  							<div class="filter-item">
+      							<div class="filter-item-caption">权益服务指标</div>
+      							<div class="filter-item-control">
+          							<select class="eui-select">
+				              			<option value="">--请选择--</option>
+				              			<option value="1">积极</option>
+				             			<option value="2">活跃</option>
+				             			<option value="3">冒泡</option>	
+				             			<option value="4">潜水</option>
+          							</select>	
+      							</div>
+  							</div>
+     					</li>
+     					<li>
+     						<div class="check_div">
+     							<input type="checkbox" id="checkbox-1" name="checkbox" class="eui-checkbox">
+          						<label for="checkbox-1">健康体检剩余</label>
+          						<input type="number" class="eui-input surplus_Num" value="0"/>
+          						<span class="check_txtNum">次</span>
+     						</div>
+     						<div class="check_div">
+     							<input type="checkbox" id="checkbox-2" name="checkbox" class="eui-checkbox">
+          						<label for="checkbox-2">国内游剩余</label>
+          						<input type="number" class="eui-input surplus_Num" value="0"/>
+          						<span class="check_txtNum">次</span>
+     						</div>
+     						<div class="check_div">
+     							<input type="checkbox" id="checkbox-3" name="checkbox" class="eui-checkbox">
+          						<label for="checkbox-3">周边跟团游剩余</label>
+          						<input type="number" class="eui-input surplus_Num" value="0"/>
+          						<span class="check_txtNum">次</span>
+     						</div>
+     					</li>
+     					<li>
+     						<div class="check_div">
+     							<input type="checkbox" id="checkbox-4" name="checkbox" class="eui-checkbox">
+          						<label for="checkbox-4">周周活动剩余</label>
+          						<input type="number" class="eui-input surplus_Num" value="0"/>
+          						<span class="check_txtNum">次</span>
+     						</div>
+     					</li>
+     					<li>
+     						<div class="filter-item">
+     							<span class="filter-item-caption filter-item-list">入会时间</span>
+     							<div class="filter-item-control" id="membershipTime">
+     								<input type="text" placeholder="请选择开始时间" onclick="laydate({max:$(this).siblings('input').val()||laydate.now(),choose:function(dates){$(this).trigger('change')}})"/>
+     								<input type="text" placeholder="请选择结束时间" onclick="laydate({max:laydate.now(),min:$(this).siblings('input').val(),choose:function(dates){$(this).trigger('change')}})"/>
+     							</div>
+     						</div>
+     						<div class="filter-item">
+     							<span class="filter-item-caption filter-item-list">权益失效时间</span>
+     							<div class="filter-item-control" id="membershipTime">
+     								<input type="text" placeholder="请选择开始时间" onclick="laydate({max:$(this).siblings('input').val()||laydate.now(),choose:function(dates){$(this).trigger('change')}})"/>
+     								<input type="text" placeholder="请选择结束时间" onclick="laydate({max:laydate.now(),min:$(this).siblings('input').val(),choose:function(dates){$(this).trigger('change')}})"/>
+     							</div>
+     						</div>
+     						<div class="filter-item">
+     							<span class="filter-item-caption filter-item-list">会员分配时间</span>
+     							<div class="filter-item-control" id="membershipTime">
+     								<input type="text" placeholder="请选择开始时间" onclick="laydate({max:$(this).siblings('input').val()||laydate.now(),choose:function(dates){$(this).trigger('change')}})"/>
+     								<input type="text" placeholder="请选择结束时间" onclick="laydate({max:laydate.now(),min:$(this).siblings('input').val(),choose:function(dates){$(this).trigger('change')}})"/>
+     							</div>
+     						</div>
+     					</li>
+     					<li>
+     						<div class="filter-item">
+     							<span class="filter-item-caption filter-item-list">预约时间</span>
+     							<div class="filter-item-control" id="membershipTime">
+     								<input type="text" placeholder="请选择开始时间" onclick="laydate({max:$(this).siblings('input').val()||laydate.now(),choose:function(dates){$(this).trigger('change')}})"/>
+     								<input type="text" placeholder="请选择结束时间" onclick="laydate({max:laydate.now(),min:$(this).siblings('input').val(),choose:function(dates){$(this).trigger('change')}})"/>
+     							</div>
+     						</div>
+     						<div class="filter-item">
+     							<span class="filter-item-caption filter-item-list">最近跟进时间</span>
+     							<div class="filter-item-control" id="membershipTime">
+     								<input type="text" placeholder="请选择开始时间" onclick="laydate({max:$(this).siblings('input').val()||laydate.now(),choose:function(dates){$(this).trigger('change')}})"/>
+     								<input type="text" placeholder="请选择结束时间" onclick="laydate({max:laydate.now(),min:$(this).siblings('input').val(),choose:function(dates){$(this).trigger('change')}})"/>
+     							</div>
+     						</div>
+     					</li>
+     				</ul>
+     				
+				</div>
+				<div class="eui-dialog-ft">
+					<button type="button" class="eui-btn eui-btn-secondary">确认</button>
+					<button type="button" class="eui-btn eui-btn-cancel">取消</button>
+				</div>
+			</div>
+		</div>
+		<div class="eui-dialog show" id="memberBirth">
+			<div class="eui-dialog-mask show"></div>
+			<div class="eui-dialog-cont" style="width: 396px;">
+				<div class="eui-dialog-hd">
+					<h3>自定义生日</h3>
+					<button class="eui-dialog-btn-close"></button>
+				</div>
+				<div class="eui-dialog-bd">
+					<div>
+						<input type="text" class="memberBirthTime" id="memberBirthBeginTime" placeholder="请选择开始时间" onclick="laydate({max:$(this).siblings('input').val()||laydate.now(),choose:function(dates){$(this).trigger('change')}})"/>
+						<input type="text" class="memberBirthTime" id="memberBirthEndTime" placeholder="请选择结束时间" onclick="laydate({max:laydate.now(),min:$(this).siblings('input').val(),choose:function(dates){$(this).trigger('change')}})"/>
+					</div>
+				</div>
+				<div class="eui-dialog-ft">
+					<button type="button" class="eui-btn eui-btn-secondary">确认</button>
+					<button type="button" class="eui-btn eui-btn-cancel">取消</button>
+				</div>
+			</div>
+		</div>
+		<button class="eui-btn eui-btn-primary" id="btn-2">高级筛选</button>
+		<div class="filter-tip">
+  			<div class="filter-icon"></div>
+  			<div class="filter-tip-cont">
+  				<p>活跃度选项说明：</p>
+  				<p>1、积极:权益使用3次/月以上,3个月内全好评；</p>
+  				<p>2、活跃:权益使用2到3次/月,3个月内全好评；</p>
+  				<p>3、冒泡:权益使用1到N次/月，3个月内有中评或者投诉，差评，投诉差评总数小于3次；</p>
+  				<p>4、潜水:权益未使用，或者3个月内投诉和差评2次以上；</p>
+  			</div>
+  		</div>
+
+	<script type="text/javascript" src="js/jQuery.js" ></script>	
+	<!--<script type="text/javascript" src='http://file.40017.cn/quyu/Public/eui/eui.js'></script>-->
+	<script type="text/javascript" src="js/eui.js" ></script>
+	<!--<script type="text/javascript" src="/Sell/CustomerService/Content/Script/CustomerQualityCheck/index.js?v=2017030201"></script>
+	<script type="text/javascript" src="/Sell/CustomerService/Content/Script/CustomerQualityCheck/Index_messageContent.js?v=20170309324"></script>
+	<script type="text/javascript" src="/sell/customerservice/Content/selectAddress/selectAddress.js?v=2017030201"></script>-->
+	<!--<script src='/sell/customerservice/Content/selectAddress/selectAddress.js?_t=20170314184551726' type='text/javascript'></script>-->
+	<script type="text/javascript" src="js/layer/layer.js" ></script>
+	<script type="text/javascript" src="js/selectAddress.js" ></script>
+	<script type="text/javascript" src="js/createRoot.js" ></script>
+	<script type="text/javascript" src="js/addresschoosedaoru.js" ></script>
+	<script type="text/javascript" src="js/laydate/laydate.js" ></script>
+	<!--<script type="text/javascript" src="/Sell/CustomerService/Content/Script/WeChatServiceMemberList/index.js?v=2017040601"></script>-->
+
+	<script type="text/javascript">
+//		 $.ajax({
+//          url: '/Sell/CustomerService/Home/GetAreaInfoByJson',
+//			url:'address.json',
+//          dataType: 'json',
+//          success: function (data) {
+//              serviceMemberList.config.addressAjaxData = data;
+//              $("#usualAddress").selectAddress({
+//                  data: data,
+//                  grade: 3,
+//                  IsNeedSaveButton: 1,
+//              });
+//              serviceMemberList.handles.getSessionStorage();
+//              serviceMemberList.handles.initFilterDialog();
+//          },
+//          error: function (error) {
+//              console.log(error)
+//          }
+//      })
+		$('#btn-2').click(function(){ 
+			$('#eDialog-1').eDialog('show');		
+		});
+	</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

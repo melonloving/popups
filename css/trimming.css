@@ -1,0 +1,207 @@
+@charset "utf-8";
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,form,fieldset,legend,input,
+select,textarea,button,caption,th,td,blockquote,pre{
+	margin:0;
+	padding:0;
+}
+.eui-dialog .eui-dialog-cont
+{
+	width: 820px;
+	/*min-height: 400px;
+	max-height: 520px;*/
+}
+.eui-dialog-bd
+{
+	overflow-y: scroll;
+}
+.eui-dialog .eui-form-item
+{
+	font-size: 13px;
+	display: flex;
+}
+.eui-radio-variant+label
+{
+	font-size: 14px;
+}
+.eui-item-chooselist
+{
+	margin:0;
+	padding: 0;
+	margin-left: -11px;
+	list-style: none;
+}
+.eui-item-chooselist>li
+{
+	display: flex;
+}
+.filter-item
+{
+	display: flex;	
+	/*margin-left: 11px;*/
+	/*margin-right: 44px;*/
+}
+.filter-item-caption
+{
+	padding-top: 18px;
+	width: 80px;
+	text-align: right;
+}
+.filter-item .filter-item-control
+{
+	display: flex;
+	width: 171px;
+}
+.eui-select
+{
+	width: 156px;
+	font-size: 14px;
+}
+.age
+{
+	width: 75px;
+	height: 31px;
+	margin-right: -3px;
+	margin-top: 8px;
+	font-size: 12px;
+}
+.birthday
+{
+	margin-left: 10px;
+}
+.eui-dialog-ft
+{
+	display: flex;
+	justify-content: flex-end;
+	font-size: 13px;
+}
+.list-age
+{
+	margin-top: -2px;
+}
+.select-address
+{
+	width: 154px;
+	margin-left: 7px;
+	margin-top: 8px;
+}
+.eui-select > option:checked
+{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.check_div
+{
+	width: 240px;
+	height: 40px;
+	margin-left: 24px;
+}
+.surplus_Num
+{
+	width: 50px;
+	height: 30px;
+}
+.check_txtNum
+{
+	width: 30px;
+	height: 20px;
+}
+.filter-item-list
+{
+	width: 84px;
+	height: 30px;
+	text-align: right;
+	margin-right: 8px;
+	margin-left: -9px;
+}
+#membershipTime
+{
+	display: flex;
+	flex-direction: column;
+}
+#membershipTime input[type="text"]
+{
+	width: 142px;
+	border: 1px solid #DBDBDB;
+	height: 28px;
+	padding: 0 5px;
+	margin-top: 10px;
+	border-radius: 4px;
+	font-size: 14px;
+	outline: none;
+}
+.eui-btn
+{
+	height: 28px;
+	display: inline-block;
+}
+#birthday
+{	
+	opacity: 0;
+	z-index: 10;
+}
+.memberBirthVal
+{
+	width: 140px;
+	height: 30px;
+	border: 1px solid #DBDBDB;
+	border-radius: 4px;
+	position: absolute;
+	top: 257px;
+	z-index: 9;
+	line-height: 30px;
+	padding: 0 7px;
+	color: #000000;
+	font-size: 3px;
+	/*opacity: 0;*/
+	margin-left: 7px;
+}
+.memberBirthTime
+{
+	width: 142px;
+	border: 1px solid #DBDBDB;
+	height: 28px;
+	padding: 0 5px;
+	margin-top: 10px;
+	border-radius: 4px;
+	font-size: 14px;
+	outline: none;
+	margin-left: 8px;
+}
+.filter-tip
+{
+	display: inline-block;
+	position: relative;
+	/*margin-left: 20px;*/
+}
+.filter-icon
+{
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	background: url(../img/icon.png) no-repeat;
+}
+
+.filter-tip-cont
+{
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 300px;
+	padding: 15px 10px;
+	border: 1px solid #F39C11;
+	background-color: #FFB339;
+	color: #FFFFFF;
+	line-height: 1.8em;
+	border-radius: 5px;
+	z-index: 9;
+	opacity: 0;
+	transition: all .3s;
+	font-size: 12px;
+}
+.filter-icon:hover  + .filter-tip-cont
+{
+	visibility: visible;
+	opacity: 1;
+	left: 120%;
+}

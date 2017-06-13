@@ -1,0 +1,176 @@
+.eui-dialog
+{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.eui-dialog .eui-dialog-mask
+{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+}
+.eui-dialog .eui-dialog-cont
+{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    min-width: 300px;
+    min-height: 200px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.eui-dialog .eui-dialog-cont .eui-dialog-hd
+{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px 30px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #4eb900;
+    min-height: 40px;
+    box-sizing: border-box;
+    color: #fff
+}
+.eui-dialog .eui-dialog-cont .eui-dialog-hd h3
+{
+	font-size: 1.2em;
+    font-weight: normal;
+    margin: 0;
+}
+.eui-dialog-hd .eui-dialog-btn-close
+{
+	display: inline-block;
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+    border: none;
+    outline: none;
+    background: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.eui-dialog-hd .eui-dialog-btn-close::before
+{
+	content: "";
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+.eui-dialog-hd .eui-dialog-btn-close::after
+{
+	content: "";
+    position: absolute;
+    width: 1.5em;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+.eui-dialog-cont .eui-dialog-bd
+{
+	-webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+.eui-dialog-cont .eui-dialog-ft
+{
+	box-sizing: border-box;
+    margin: 0 30px;
+    padding: 15px 0;
+    border-top: 1px solid #eeeeee;
+}
+.eui-btn-primary
+{
+	color: #f8f9f8;
+    border-color: #4EB900;
+    background-color: #4EB900;
+}
+.eui-btn-primary:hover {
+  border-color: #3b8704;
+  background-color: #3b8704;
+}
+.eui-btn
+{
+	box-sizing: border-box;
+    padding: .37em .57em;
+    margin: .57em;
+    border: 1px solid #dbdbdb;
+    border-radius: .28em;
+    font-size: 1em;
+    line-height: 1.4;
+    padding-left: 1.14em;
+    padding-right: 1.14em;
+    white-space: nowrap;
+    outline: none;
+    /*background: none;*/
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.eui-dialog.show
+{
+	visibility: visible;
+	opacity: 1;
+}
+.eui-dialog-mask.show
+{
+	visibility: visible;
+	opacity: 1;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<link rel="stylesheet" href="http://file.40017.cn/quyu/Public/eui/eui.css" />
+			<link rel="stylesheet" href="css/trimming.css" />
+			<link rel="stylesheet" href="css/addresschoose.css" />
+		<title>测试</title>
+	</head>
+	<body>
+		<div class="eui-form-item">
+	        	<div class="eui-form-item-caption">
+	          		<label for="">多选框</label>
+	      		</div>
+       	 	<div class="eui-form-item-control">
+	            <input type="checkbox" disabled id="checkbox-1" name="checkbox" class="eui-checkbox" checked>
+	            <label for="checkbox-1">多选1</label>
+	          	<input type="checkbox" id="checkbox-2" name="checkbox" class="eui-checkbox">
+	          	<label for="checkbox-2">多选2</label>
+	          	<input type="checkbox" id="checkbox-3" name="checkbox" class="eui-checkbox" checked>
+	          	<label for="checkbox-3">多选3</label>
+      		</div>
+  		</div>
+  		
+  		<div class="filter-tip">
+  			<div class="filter-icon"></div>
+  			<div class="filter-tip-cont">
+  				<p>活跃度选项说明：</p>
+  				<p>1、积极:权益使用3次/月以上,3个月内全好评；</p>
+  				<p>2、活跃:权益使用2到3次/月,3个月内全好评；</p>
+  				<p>3、冒泡:权益使用1到N次/月，3个月内有中评或者投诉，差评，投诉差评总数小于3次；</p>
+  				<p>4、潜水:权益未使用，或者3个月内投诉和差评2次以上；</p>
+  			</div>
+  		</div>
+  		
+  		<div id="usualAddress" class="select-address"></div>
+  		<div class="student"></div>
+  		<script type="text/javascript" src="js/jQuery.js" ></script>
+  		<script type="text/javascript" src="js/eui.js" ></script>
+  		<script type="text/javascript" src="js/selectAddress.js" ></script>
+  		<script type="text/javascript" src="js/createRoot.js" ></script>
+  		<script type="text/javascript" src="js/addresschoosedaoru.js" ></script>
+		<script>
+			var student=new Array();
+			student[0]="tom";
+			student[1]="Jimmy";
+			student[2]="Handy";
+			for(var i in student)
+			{
+				var str=student[i];
+				$('.student').append(str+"<br/>");
+			}
+			
+		</script>
+	</body>
+</html>
